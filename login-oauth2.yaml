@@ -49,6 +49,11 @@ providers:
     options:
       scope: ['r_basicprofile','r_emailaddress']
 
+  nextcloud:
+    enabled: false
+    url: 'https//example.com'
+    client_id: ''
+    client_secret: ''
 
 
 admin:
@@ -95,3 +100,9 @@ admin:
       client_secret: ''
       options:
         scope: ['r_basicprofile','r_emailaddress']
+
+    nextcloud:
+      enabled: false
+      url: 'https//example.com'
+      client_id: ''
+      client_secret: ''

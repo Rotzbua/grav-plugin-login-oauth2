@@ -661,12 +661,113 @@ form:
                           validate:
                             type: commalist
 
-
                 providers.linkedin.description:
                   type: display
                   style: vertical
                   content: '[<i class="fa fa-book"></i> LinkedIn OAuth2 from the official documentation](https://developer.linkedin.com/docs/oauth2?target=_blank)'
                   markdown: true
+
+
+            nextcloud:
+              type: fieldset
+              title: nextcloud
+              collapsible: true
+
+              fields:
+
+                nextcloud_columns:
+                  type: columns
+
+                  fields:
+
+                    nextcloud_column_left:
+                      type: column
+
+                      fields:
+
+                        nextcloud.site:
+                          type: display
+                          style: vertical
+                          content: '<h3>Site</h3>'
+
+                        providers.nextcloud.enabled:
+                          type: toggle
+                          label: Enabled
+                          highlight: 1
+                          default: 0
+                          options:
+                            1: Enabled
+                            0: Disabled
+                          validate:
+                            type: bool
+
+                        providers.nextcloud.url:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.URL
+
+                        providers.nextcloud.client_id:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                        providers.nextcloud.client_secret:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                        providers.nextcloud.options.scope:
+                          type: selectize
+                          size: large
+                          label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                          classes: fancy
+                          validate:
+                            type: commalist
+
+                    nextcloud_column_right:
+                      type: column
+
+                      fields:
+
+                        nextcloud.admin:
+                          type: display
+                          style: vertical
+                          content: '<h3>Admin</h3>'
+
+                        admin.providers.nextcloud.enabled:
+                          type: toggle
+                          label: Enabled
+                          highlight: 1
+                          default: 0
+                          options:
+                            1: Enabled
+                            0: Disabled
+                          validate:
+                            type: bool
+
+                        admin.providers.nextcloud.url:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.URL
+
+                        admin.providers.nextcloud.client_id:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                        admin.providers.nextcloud.client_secret:
+                          type: text
+                          label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                        admin.providers.nextcloud.options.scope:
+                          type: selectize
+                          size: large
+                          label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                          classes: fancy
+                          validate:
+                            type: commalist
+
+                providers.nextcloud.description:
+                  type: display
+                  style: vertical
+                  content: '[<i class="fa fa-book"></i> Nextcloud OAuth2 from the official documentation](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/oauth2.html)'
+                  markdown: true
+
 
         tab_3:
           type: tab
